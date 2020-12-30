@@ -48,6 +48,9 @@ const anaSayfa = function (req, res, next) {
     });
 }
 
+
+
+
 const mekanBilgisi = function (req, res, next) {
   res.render('mekan-detay',
     {
@@ -63,35 +66,36 @@ const mekanBilgisi = function (req, res, next) {
           'enlem': 37.781885,
           'boylam': 30.566034
         },
-        'saatler':[
-            {
-              'gunler':'Pazartesi-Cuma',
-              'acilis':'7:00',
-              'kapanis':'23:00',
-              'kapali':false
-            },
-            {
-              'gunler':'Cumartesi',
-              'acilis':'9:00',
-              'kapanis':'22:30',
-              'kapali':false
-            },
-            {
-              'gunler':'Pazar',
-              'kapali':true
-            }
+        'saatler': [
+          {
+            'gunler': 'Pazartesi-Cuma',
+            'acilis': '7:00',
+            'kapanis': '23:00',
+            'kapali': false
+          },
+          {
+            'gunler': 'Cumartesi',
+            'acilis': '9:00',
+            'kapanis': '22:30',
+            'kapali': false
+          },
+          {
+            'gunler': 'Pazar',
+            'kapali': true
+          }
         ],
-        'yorumlar':[
-            {
-              'yorumYapan':'Ahmet Can Akdaş',
-              'puan':3,
-              'tarih':'20 Kasım 2020',
-              'yorumMetni':'İdare Eder'
-            }
+        'yorumlar': [
+          {
+            'yorumYapan': 'Ahmet Can Akdaş',
+            'puan': 2.5,
+            'tarih': '20 Kasım 2020',
+            'yorumMetni': 'İdare Eder'
+          }
         ]
       }
-  });
+    });
 }
+
 
 const yorumEkle = function (req, res, next) {
   res.render('yorum-ekle', { title: 'Yorum Ekle' });
